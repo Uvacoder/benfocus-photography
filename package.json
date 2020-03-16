@@ -17,7 +17,6 @@
     "@emotion/core": "^10.0.28",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.3.1",
-    "gatsby-plugin-extract-image-colors": "^0.0.14",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-nprogress": "^2.2.1",
     "gatsby-plugin-purgecss": "^5.0.0",
@@ -31,8 +30,7 @@
     "gatsby-transformer-sharp": "^2.4.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "tailwindcss": "^1.2.0"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
