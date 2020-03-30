@@ -13,15 +13,8 @@ module.exports = {
         showSpinner: false,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Open+Sans\:400,700`],
-        display: 'swap',
-      },
-    },
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-purgecss',
     {
       resolve: `gatsby-source-filesystem`,

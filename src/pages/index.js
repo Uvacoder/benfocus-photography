@@ -1,4 +1,4 @@
 import React from 'react'
-import '../index.css'
+import '../assets/css/style.css'
 
 export default () => <div>Hello world!</div>

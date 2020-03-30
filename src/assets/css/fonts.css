@@ -1,0 +1,17 @@
+/* montserrat-regular */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+    url('../fonts/montserrat/montserrat-medium.ttf') format('truetype');
+}
+
+/* fjalla-one-regular */
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fjalla One'), local('FjallaOne-Regular'),
+    url('../fonts/fjalla-one/fjalla-one-regular.ttf') format('truetype');
+}
