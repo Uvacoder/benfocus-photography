@@ -31,14 +31,7 @@ export default ({ title, index, to, children, className }) => {
         `}>
         {title}
       </div>
-      <div
-        css={css`
-          font-size: 1rem;
-          line-height: 1.4rem;
-          margin-bottom: 1rem;
-        `}>
-        {children}
-      </div>
+      {children}
       {to ? (
         <SiteButton
           to={to}
