@@ -1,9 +1,9 @@
 /** @jsx jsx */
 
 import { Link } from 'gatsby'
-import { css, jsx } from '@emotion/core'
+import { css, jsx, Global } from '@emotion/core'
 
-import '../assets/css/style.css'
+import Styles from '../assets/css/style.css'
 
 import { Colors, Fonts } from '../constants'
 
@@ -24,6 +24,7 @@ export default ({ children }) => {
       css={css`
         color: ${Colors.text};
       `}>
+      <Global styles={Styles} />
       <header
         css={css`
           background-image: url(${HeaderBg});
