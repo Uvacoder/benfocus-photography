@@ -9,5 +9,5 @@ export const Colors = {
   light: '#FBFBFB',
   primary: '#EA1C24',
   shade: '#D48C94',
-  secondary: '#3C3C3C',
+  secondary: '#252525',
 }

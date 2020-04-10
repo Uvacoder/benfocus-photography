@@ -15,6 +15,7 @@ export default ({ to, label }) => {
         text-transform: uppercase;
         padding: 1rem 2rem;
         letter-spacing: 0.05rem;
+        color: ${Colors.text};
       `}>
       {label}
     </Link>
