@@ -3,7 +3,7 @@
 import { Link } from 'gatsby'
 import { css, jsx, Global } from '@emotion/core'
 
-import Styles from '../assets/css/style.css'
+import Styles from '../styles'
 
 import { Colors, Fonts } from '../constants'
 

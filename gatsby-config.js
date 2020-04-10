@@ -14,8 +14,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Montserrat\:400`, `Fjalla One\:400`],
+        display: 'swap',
+      },
+    },
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-purgecss',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
