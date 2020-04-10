@@ -139,7 +139,7 @@ export default ({ children }) => {
           <SiteButton to="/services" label="More Info" />
         </div>
       </header>
-      {/* {children} */}
+      {children}
       <footer
         css={css`
           background-color: ${Colors.secondary};
