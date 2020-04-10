@@ -114,8 +114,6 @@ export default ({ children }) => {
             transform: translate(-50%, -50%);
             text-align: center;
             width: 100%;
-            color: ${Colors.white};
-            margin-top: 2rem;
           `}>
           <h1
             css={css`
@@ -125,7 +123,7 @@ export default ({ children }) => {
               color: inherit;
               text-transform: uppercase;
             `}>
-            Areial Photography Services
+            Photography & Videography Services
           </h1>
           <h2
             css={css`
