@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/404.js"],"names":[],"mappings":"2FAAA,4CAIe,4BACb,kBAAC,IAAD,KACE","file":"component---src-pages-404-js-56a1c81eaa481f008796.js","sourcesContent":["import React from 'react'\n\nimport Wrap from '../layouts/wrap'\n\nexport default () => (\n  <Wrap>\n    <h1>404</h1>\n  </Wrap>\n)\n"],"sourceRoot":""}
