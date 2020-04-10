@@ -5,6 +5,7 @@ export const Fonts = {
 
 export const Colors = {
   text: '#241C23',
+  white: '#FFFFFF',
   light: '#FBFBFB',
   primary: '#EA1C24',
   shade: '#D48C94',
