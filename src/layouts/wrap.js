@@ -1,6 +1,7 @@
 /** @jsx jsx */
 
 import { Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import { css, jsx, Global } from '@emotion/core'
 
 import Styles from '../styles'
@@ -301,13 +302,52 @@ const Footer = () => {
   )
 }
 
-export default ({ children }) => {
+export default ({ children, pageTitle }) => {
+  const siteMetadata = {
+    title: `Ben Focus${pageTitle ? ' - ' + pageTitle : ''}`,
+    description: 'Ben Focus',
+    siteURL: 'https://ben-focus.com',
+  }
   return (
     <div
       css={css`
         color: ${Colors.text};
       `}>
       <Global styles={Styles} />
+      <Helmet
+        defaultTitle={siteMetadata.title}
+        meta={[
+          { name: `description`, content: siteMetadata.description },
+
+          // <!-- Google / Search Engine Tags -->
+          { itemprop: 'name', content: siteMetadata.title },
+          { itemprop: 'description', content: siteMetadata.description },
+          { itemprop: 'image', content: `${siteMetadata.siteURL}/cover.jpg` },
+
+          // <!-- Facebook Meta Tags -->
+          { property: 'og:type', content: 'website' },
+          { property: 'og:url', content: siteMetadata.siteURL },
+          { property: 'og:title', content: siteMetadata.title },
+          { property: 'og:description', content: siteMetadata.description },
+          {
+            property: 'og:image',
+            content: `${siteMetadata.siteURL}/cover.jpg`,
+          },
+
+          // <!-- Twitter Meta Tags -->
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:title', content: siteMetadata.title },
+          {
+            name: 'twitter:description',
+            content: siteMetadata.description,
+          },
+          {
+            name: 'twitter:image',
+            content: `${siteMetadata.siteURL}/cover.jpg`,
+          },
+        ]}>
+        <html lang="en" />
+      </Helmet>
       <Header />
       {children}
       <Footer />

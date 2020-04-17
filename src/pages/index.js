@@ -21,7 +21,7 @@ import NormalSection from '../components/normal_section'
 import SiteButton from '../components/site_button'
 
 export default () => (
-  <Wrap>
+  <Wrap pageTitle="Home">
     <NormalSection color={Colors.white}>
       <div className="container">
         <div className="row">
@@ -205,6 +205,8 @@ export default () => (
               case 4:
                 image = ServiceImage4
                 break
+              default:
+                image = ServiceImage1
             }
             return (
               <div className="col-3">
