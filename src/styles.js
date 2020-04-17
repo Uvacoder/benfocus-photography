@@ -384,9 +384,7 @@ export default css`
   /* ADDITIONAL CSS: START */
   html {
     box-sizing: border-box;
-    font-family: ${Fonts.body}, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-      'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: ${Fonts.body};
     font-size: 15px;
   }
 
