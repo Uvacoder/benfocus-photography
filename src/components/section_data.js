@@ -19,8 +19,11 @@ export const SectionDescription = ({ color, children }) => {
   )
 }
 
-export const SectionHead = ({ color, title }) => {
+export const SectionHead = ({ color, title, centered }) => {
   color = color || Colors.text
+  const centeredStyle = centered
+    ? 'left: 50%; transform: translateX(-50%);'
+    : 'left: 0;'
   return (
     <div
       css={css`
@@ -34,11 +37,11 @@ export const SectionHead = ({ color, title }) => {
         &:before {
           content: '';
           border-top: 0.1rem solid;
-          left: 0;
           position: absolute;
           width: 3rem;
           color: ${color};
           bottom: -1.4rem;
+          ${centeredStyle}
         }
       `}>
       {title}
