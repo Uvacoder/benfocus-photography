@@ -15,6 +15,7 @@ import ServiceImage3 from '../assets/images/service-3.png'
 import ServiceImage4 from '../assets/images/service-4.png'
 
 import { SectionHead, SectionDescription } from '../components/section_data'
+import MiniProject from '../components/mini_project'
 import MiniService from '../components/mini_service'
 import NormalSection from '../components/normal_section'
 import SiteButton from '../components/site_button'
@@ -243,6 +244,48 @@ export default () => (
                   ))}
                 </ul>
               </div>
+            )
+          })}
+        </div>
+      </div>
+    </NormalSection>
+    <NormalSection color={Colors.light}>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 center">
+            <SectionHead centered title="Recent Projects" />
+          </div>
+          {[
+            {
+              title: 'Drone With Claws',
+              date: 'August 2, 2019',
+              slug: 'project-slug',
+              body:
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsa perspiciatis, eaque unde accusantium voluptates dolor placeat?',
+            },
+            {
+              title: 'Drone With Claws',
+              date: 'August 2, 2019',
+              slug: 'project-slug',
+              body:
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsa perspiciatis, eaque unde accusantium voluptates dolor placeat?',
+            },
+            {
+              title: 'Drone With Claws',
+              date: 'August 2, 2019',
+              slug: 'project-slug',
+              body:
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsa perspiciatis, eaque unde accusantium voluptates dolor placeat?',
+            },
+          ].map(item => {
+            return (
+              <MiniProject
+                className="col-4"
+                title={item.title}
+                date={item.date}
+                slug={item.slug}>
+                {item.body}
+              </MiniProject>
             )
           })}
         </div>
