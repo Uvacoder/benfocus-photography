@@ -2,7 +2,7 @@
 
 import { css, jsx } from '@emotion/core'
 
-export default ({ color, image, imageRight, children }) => {
+export default ({ color, image, imageRight, children, noPadding }) => {
   const bgColor = `background-color: ${color || 'transparent'}`
   const bgImage = image ? `background-image: url(${image});` : ''
   const bgSize = `background-size: ${imageRight ? 'contain' : 'cover'};`
@@ -12,7 +12,7 @@ export default ({ color, image, imageRight, children }) => {
     <div
       css={css`
         position: relative;
-        padding: 7rem 0rem;
+        padding: ${noPadding ? '0rem' : '7rem 0rem'};
         background-position: ${imageRight ? 'center right' : 'top center'};
         ${bgRepeat}
         ${bgSize}

@@ -7,6 +7,7 @@ import Wrap from '../layouts/wrap'
 import { Colors, Fonts } from '../constants'
 
 import HomeAboutImg from '../assets/images/home-about.png'
+import MiniAboutImage from '../assets/images/mini-about.png'
 
 import ServiceImage1 from '../assets/images/service-1.png'
 import ServiceImage2 from '../assets/images/service-2.png'
@@ -244,6 +245,65 @@ export default () => (
               </div>
             )
           })}
+        </div>
+      </div>
+    </NormalSection>
+    <NormalSection>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 center">
+            <SectionHead centered title="Our Team" />
+          </div>
+          <div className="col-4">
+            <div
+              css={css`
+                background-color: ${Colors.primary};
+                padding: 4.5rem 2.5rem 1.5rem;
+              `}>
+              <div
+                css={css`
+                  color: ${Colors.white};
+                  font-family: ${Fonts.head};
+                  margin-bottom: 2rem;
+                  font-size: 2rem;
+                  text-transform: uppercase;
+                `}>
+                Who We Are
+              </div>
+              <SectionDescription color={Colors.white}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aperiam provident, ipsam ea odio sit, voluptates sequi placeat
+                eveniet fugiat quod consequatur
+              </SectionDescription>
+            </div>
+          </div>
+          <div className="col-4">
+            <img src={MiniAboutImage} alt="About Us" width="100%" />
+          </div>
+          <div className="col-4">
+            <div
+              css={css`
+                font-family: ${Fonts.head};
+                margin-bottom: 1rem;
+                font-size: 2rem;
+                text-transform: uppercase;
+              `}>
+              Benjamin Tambara
+            </div>
+            <div
+              css={css`
+                color: ${Colors.primary};
+                margin-bottom: 1.5rem;
+                font-size: 1rem;
+              `}>
+              Creative Director
+            </div>
+            <SectionDescription>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+              provident, ipsam ea odio sit, voluptates sequi placeat eveniet
+              fugiat quod consequatur
+            </SectionDescription>
+          </div>
         </div>
       </div>
     </NormalSection>

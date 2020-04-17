@@ -376,7 +376,7 @@ export default css`
     /* 960px */
     .container {
       width: 75%;
-      max-width: 60rem;
+      max-width: 65rem;
     }
   }
   /* GRID: END */
