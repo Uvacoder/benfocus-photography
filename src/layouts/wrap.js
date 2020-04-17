@@ -19,7 +19,7 @@ import NormalSection from '../components/normal_section'
 
 const websiteTitle = 'Ben Focus'
 
-const Header = () => {
+const Header = ({ innerPageName }) => {
   return (
     <header
       css={css`
@@ -28,7 +28,8 @@ const Header = () => {
         background-size: cover;
         padding-top: 1rem;
         position: relative;
-        min-height: 100vh;
+        min-height: ${innerPageName ? '25rem' : '100vh'};
+        background-attachment: ${innerPageName ? 'initial' : 'fixed'};
       `}>
       <div className="container-fluid">
         <div className="row">
@@ -115,25 +116,40 @@ const Header = () => {
         <h1
           css={css`
             font-family: ${Fonts.head};
-            font-size: 4rem;
+            font-size: ${innerPageName ? '3rem' : '4rem'};
             margin-bottom: 2rem;
-            color: inherit;
+            display: inline-block;
+            margin-top: ${innerPageName ? '3rem' : 0};
+            background-color: ${innerPageName ? Colors.primary : 'initial'};
+            color: ${innerPageName ? Colors.white : 'inherit'};
             text-transform: uppercase;
+            padding: 1rem 2rem;
           `}>
-          Photography & Videography Services
+          {innerPageName || 'Photography & Videography Services'}
         </h1>
-        <h2
-          css={css`
-            color: inherit;
-            line-height: 1.5rem;
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-          `}>
-          Extreme Aerial Photography and Video Artistry for Lifestyle, Action
-          and Commerce.
-        </h2>
-        <SiteButton to="/services" label="More Info" />
+        {innerPageName ? (
+          ''
+        ) : (
+          <div>
+            <h2
+              css={css`
+                color: inherit;
+                line-height: 1.5rem;
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+                opacity: 0.8;
+              `}>
+              Extreme Aerial Photography and Video Artistry for Lifestyle,
+              Action and Commerce.
+            </h2>
+            <SiteButton
+              to="/services"
+              color={Colors.primary}
+              textColor={Colors.white}
+              label="More Info"
+            />
+          </div>
+        )}
       </div>
     </header>
   )
@@ -302,7 +318,7 @@ const Footer = () => {
   )
 }
 
-export default ({ children, pageTitle }) => {
+export default ({ children, pageTitle, innerPageName }) => {
   const siteMetadata = {
     title: `Ben Focus${pageTitle ? ' - ' + pageTitle : ''}`,
     description: 'Ben Focus',
@@ -348,7 +364,7 @@ export default ({ children, pageTitle }) => {
         ]}>
         <html lang="en" />
       </Helmet>
-      <Header />
+      <Header innerPageName={innerPageName} />
       {children}
       <Footer />
     </div>
