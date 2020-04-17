@@ -11,6 +11,7 @@ export default ({ color, image, imageRight, children }) => {
   return (
     <div
       css={css`
+        position: relative;
         padding: 7rem 0rem;
         background-position: ${imageRight ? 'center right' : 'top center'};
         ${bgRepeat}

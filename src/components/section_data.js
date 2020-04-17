@@ -20,10 +20,11 @@ export const SectionDescription = ({ color, children }) => {
 }
 
 export const SectionHead = ({ color, title }) => {
+  color = color || Colors.text
   return (
     <div
       css={css`
-        color: ${color || Colors.text};
+        color: ${color};
         font-family: ${Fonts.head};
         font-size: 3rem;
         text-transform: uppercase;
@@ -36,7 +37,7 @@ export const SectionHead = ({ color, title }) => {
           left: 0;
           position: absolute;
           width: 3rem;
-          color: ${Colors.primary};
+          color: ${color};
           bottom: -1.4rem;
         }
       `}>
