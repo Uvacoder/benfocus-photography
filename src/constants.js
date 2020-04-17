@@ -7,7 +7,7 @@ export const Colors = {
   text: '#241C23',
   white: '#FFFFFF',
   light: '#FBFBFB',
-  primary: '#EA1C24',
+  primary: '#D22027',
   shade: '#D48C94',
   secondary: '#252525',
 }
