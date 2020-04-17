@@ -393,5 +393,8 @@ export default css`
   *:after {
     box-sizing: inherit;
   }
+  .gatsby-image-wrapper {
+    width: 100% !important;
+  }
   /* ADDITIONAL CSS: END */
 `
