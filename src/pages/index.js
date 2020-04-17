@@ -1,8 +1,10 @@
-import React from 'react'
+/** @jsx jsx */
+
+import { css, jsx } from '@emotion/core'
 
 import Wrap from '../layouts/wrap'
 
-import { Colors } from '../constants'
+import { Colors, Fonts } from '../constants'
 
 import HomeAboutImg from '../assets/images/home-about.png'
 
@@ -72,6 +74,53 @@ export default () => (
               label="Get In Touch"
             />
           </div>
+        </div>
+      </div>
+    </NormalSection>
+    <NormalSection color={Colors.primary}>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <SectionHead
+              color={Colors.white}
+              title="We're About Quality & Trust"
+            />
+          </div>
+          {[
+            {
+              title: 'Quality',
+              body:
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo hic optio, unde eligendi obcaecati laboriosam quos atque',
+            },
+            {
+              title: 'Professional',
+              body:
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo hic optio, unde eligendi obcaecati laboriosam quos atque',
+            },
+            {
+              title: 'Trusted',
+              body:
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo hic optio, unde eligendi obcaecati laboriosam quos atque',
+            },
+          ].map(item => {
+            return (
+              <div className="col-4">
+                <div
+                  css={css`
+                    color: ${Colors.white};
+                    font-family: ${Fonts.head};
+                    margin-bottom: 1.5rem;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                  `}>
+                  {item.title}
+                </div>
+                <SectionDescription color={Colors.white}>
+                  {item.body}
+                </SectionDescription>
+              </div>
+            )
+          })}
         </div>
       </div>
     </NormalSection>
