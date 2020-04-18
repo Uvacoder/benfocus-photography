@@ -13,4 +13,41 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions: { createPage } }) => {}
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
+  const allData = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              sort
+              title
+              category
+              thumbnail
+              photos
+              videos
+              url
+            }
+            fields {
+              slug
+            }
+            html
+          }
+        }
+      }
+    }
+  `)
+
+  const workList = allData.data.allMarkdownRemark.edges.map(item => {
+    item.node.fields.slug = item.node.fields.slug.replace(/\\|\//g, '')
+    return item.node
+  })
+
+  for (const dataItem of workList) {
+    createPage({
+      path: `/work/${dataItem.fields.slug}`,
+      context: { dataItem },
+      component: require.resolve(`./src/templates/work.js`),
+    })
+  }
+}
