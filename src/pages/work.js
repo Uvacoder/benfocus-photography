@@ -8,7 +8,7 @@ import { Colors, Fonts } from '../constants'
 
 import Wrap from '../layouts/wrap'
 import NormalSection from '../components/normal_section'
-import { SectionHead } from '../components/section_data'
+import { SectionHead, SectionDescription } from '../components/section_data'
 
 const WorkItem = ({ className, thumbnail, category, title, slug }) => {
   return (
@@ -77,6 +77,49 @@ const WorkItem = ({ className, thumbnail, category, title, slug }) => {
 
 export default () => (
   <Wrap pageTitle="Work" innerPageName="Our Work">
+    <NormalSection color={Colors.light}>
+      <div className="container center">
+        <div className="row">
+          <div className="col-12">
+            <SectionHead centered title="Reaching For The Sky" />
+            <SectionDescription color={Colors.primary}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
+              necessitatibus rerum perspiciatis odit, libero debitis iusto
+              optio, neque iure placeat voluptates repudiandae dolores numquam
+              in magnam! Odit eius est neque!
+            </SectionDescription>
+          </div>
+          <div className="col-6 left">
+            <SectionDescription>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
+              necessitatibus rerum perspiciatis odit, libero debitis iusto
+              optio, neque iure placeat voluptates repudiandae dolores numquam
+              in magnam! Odit eius est neque!
+            </SectionDescription>
+            <SectionDescription>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
+              necessitatibus rerum perspiciatis odit, libero debitis iusto
+              optio, neque iure placeat voluptates repudiandae dolores numquam
+              in magnam! Odit eius est neque!
+            </SectionDescription>
+          </div>
+          <div className="col-6 left">
+            <SectionDescription>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
+              necessitatibus rerum perspiciatis odit, libero debitis iusto
+              optio, neque iure placeat voluptates repudiandae dolores numquam
+              in magnam! Odit eius est neque!
+            </SectionDescription>
+            <SectionDescription>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
+              necessitatibus rerum perspiciatis odit, libero debitis iusto
+              optio, neque iure placeat voluptates repudiandae dolores numquam
+              in magnam! Odit eius est neque!
+            </SectionDescription>
+          </div>
+        </div>
+      </div>
+    </NormalSection>
     <NormalSection>
       <div
         className="row"
