@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ctrleffive/benfocus
   branch: master
-  base_url: https://functions.benfocus.com
+  base_url: https://functions.ben-focus.com
   auth_endpoint: api/oauth/begin
 
 media_folder: content/uploads
