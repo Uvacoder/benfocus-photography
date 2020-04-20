@@ -6,7 +6,6 @@
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
