@@ -14,4 +14,8 @@ const Colors = {
   secondary: '#252525',
 }
 
-export { Fonts, Colors }
+let Media = '750px'
+
+Media = `@media screen and (max-width: ${Media})`
+
+export { Fonts, Colors, Media }

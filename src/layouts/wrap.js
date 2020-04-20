@@ -6,7 +6,7 @@ import { css, jsx, Global } from '@emotion/core'
 
 import Styles from '../styles'
 
-import { Colors, Fonts } from '../constants'
+import { Colors, Fonts, Media } from '../constants'
 
 import Logo from '../assets/images/logo.png'
 import HeaderBg from '../assets/images/header.jpg'
@@ -28,83 +28,101 @@ const Header = ({ innerPageName }) => {
         background-size: cover;
         padding-top: 1rem;
         position: relative;
-        min-height: ${innerPageName ? '25rem' : '100vh'};
+        height: ${innerPageName ? '25rem' : '100vh'};
+        min-height: ${innerPageName ? 'initial' : '566px'};
         background-attachment: ${innerPageName ? 'initial' : 'fixed'};
+
+        ${Media} {
+          height: initial;
+          padding-top: 3rem;
+          min-height: ${innerPageName ? '25rem' : '566px'};
+          background-image: initial;
+          background-color: #eee;
+        }
       `}>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-3">
-            <Link
+      <div className="row">
+        <div className="col-3">
+          <Link
+            css={css`
+              width: 8rem;
+              display: inline-block;
+
+              ${Media} {
+                display: block;
+                text-align: center;
+                margin: auto;
+              }
+            `}
+            to="/">
+            <img src={Logo} alt={websiteTitle} width="100%" />
+          </Link>
+        </div>
+        <div className="col-9">
+          <nav
+            css={css`
+              text-align: right;
+              font-family: ${Fonts.head};
+              text-transform: uppercase;
+              letter-spacing: 0.05rem;
+              font-size: 1.2rem;
+
+              ${Media} {
+                text-align: center;
+              }
+            `}>
+            <ul
               css={css`
-                width: 8rem;
-                display: inline-block;
-              `}
-              to="/">
-              <img src={Logo} alt={websiteTitle} width="100%" />
-            </Link>
-          </div>
-          <div className="col-9">
-            <nav
-              css={css`
-                text-align: right;
-                font-family: ${Fonts.head};
-                text-transform: uppercase;
-                letter-spacing: 0.05rem;
-                font-size: 1.2rem;
+                li:last-child a {
+                  margin-right: 0;
+                }
               `}>
-              <ul
-                css={css`
-                  li:last-child a {
-                    margin-right: 0;
-                  }
-                `}>
-                {[
-                  { to: '/', title: 'Home' },
-                  { to: '/work', title: 'Work' },
-                  { to: '/about', title: 'About' },
-                  { to: '/services', title: 'Services' },
-                  { to: '/contact', title: 'Contact' },
-                ].map(item => (
-                  <li
+              {[
+                { to: '/', title: 'Home' },
+                { to: '/work', title: 'Work' },
+                { to: '/about', title: 'About' },
+                { to: '/services', title: 'Services' },
+                { to: '/contact', title: 'Contact' },
+              ].map(item => (
+                <li
+                  css={css`
+                    display: inline-block;
+                  `}>
+                  <Link
                     css={css`
-                      display: inline-block;
-                    `}>
-                    <Link
-                      css={css`
-                        display: block;
-                        margin: 1.8rem 2rem;
+                      display: block;
+                      margin: 1.8rem 2rem;
+                      transition-duration: 0.2s;
+                      position: relative;
+                      color: inherit;
+                      &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: -0.5rem;
+                        left: 0;
+                        right: 0;
+                        border-bottom: 0.1rem solid;
+                        opacity: 0;
                         transition-duration: 0.2s;
-                        position: relative;
-                        color: inherit;
+                      }
+                      &.active {
+                        color: ${Colors.primary};
                         &:before {
-                          content: '';
-                          position: absolute;
-                          bottom: -0.5rem;
-                          left: 0;
-                          right: 0;
-                          border-bottom: 0.1rem solid;
-                          opacity: 0;
-                          transition-duration: 0.2s;
+                          opacity: 1;
                         }
-                        &.active {
-                          color: ${Colors.primary};
-                          &:before {
-                            opacity: 1;
-                          }
-                        }
-                      `}
-                      activeClassName="active"
-                      to={item.to}>
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
+                      }
+                    `}
+                    activeClassName="active"
+                    to={item.to}>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
       <div
+        className="container"
         css={css`
           position: absolute;
           left: 50%;
@@ -112,6 +130,12 @@ const Header = ({ innerPageName }) => {
           transform: translate(-50%, -50%);
           text-align: center;
           width: 100%;
+
+          ${Media} {
+            padding-bottom: 4rem;
+            position: initial;
+            transform: initial;
+          }
         `}>
         <h1
           css={css`
@@ -124,6 +148,11 @@ const Header = ({ innerPageName }) => {
             color: ${innerPageName ? Colors.white : 'inherit'};
             text-transform: uppercase;
             padding: 1rem 2rem;
+
+            ${Media.tab} {
+              font-size: 3rem;
+              margin-top: 2rem;
+            }
           `}>
           {innerPageName || 'Photography & Videography Services'}
         </h1>
@@ -229,7 +258,14 @@ const Footer = () => {
                 ],
               },
             ].map(item => (
-              <div className="col-4">
+              <div
+                css={css`
+                  ${Media} {
+                    padding-bottom: 3rem;
+                    text-align: center;
+                  }
+                `}
+                className="col-4">
                 <div
                   css={css`
                     font-family: ${Fonts.head};
@@ -257,8 +293,8 @@ const Footer = () => {
                             height: 0.7rem;
                             position: absolute;
                             border-radius: 100%;
-                            left: 0;
                             top: 0.1rem;
+                            margin-left: -1.4rem;
                           }
                         `}
                         to={listItem.to}>
@@ -280,10 +316,14 @@ const Footer = () => {
           <div
             css={css`
               opacity: 0.8;
+
+              ${Media} {
+                text-align: center;
+              }
             `}
             className="row">
             <div className="col-8">
-              Ben Focus &copy; 2020. All Rights Reserved. Developed by{' '}
+              Ben Focus &copy; 2020. Website by{' '}
               <a
                 css={css`
                   color: inherit;
@@ -305,6 +345,11 @@ const Footer = () => {
                   display: inline-block;
                   width: 2rem;
                   margin-left: 0.5rem;
+                }
+
+                ${Media} {
+                  text-align: center;
+                  padding-top: 2rem;
                 }
               `}>
               <a rel="noopener noreferrer" href="https://instagram.com">
