@@ -2,7 +2,7 @@
 
 import { css, jsx } from '@emotion/core'
 
-import { Colors, Fonts } from '../constants'
+import { Colors, Fonts, Media } from '../constants'
 
 import ServiceImage1 from '../assets/images/service-1.png'
 import ServiceImage2 from '../assets/images/service-2.png'
@@ -128,8 +128,22 @@ export default ({ featured }) => {
                 className="col-4"
                 css={css`
                   height: 45rem;
+
+                  ${Media} {
+                    height: initial;
+                    text-align: center;
+                  }
                 `}>
-                <img width="100%" src={image} alt="" />
+                <img
+                  css={css`
+                    ${Media} {
+                      display: none;
+                    }
+                  `}
+                  width="100%"
+                  src={image}
+                  alt=""
+                />
                 <div
                   css={css`
                     font-family: ${Fonts.head};
@@ -156,7 +170,7 @@ export default ({ featured }) => {
                           height: 0.7rem;
                           position: absolute;
                           border-radius: 100%;
-                          left: 0;
+                          margin-left: -1.4rem;
                           top: 0.1rem;
                         }
                       `}>
