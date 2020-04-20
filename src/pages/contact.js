@@ -2,7 +2,7 @@
 
 import { css, jsx } from '@emotion/core'
 
-import { Colors, Fonts } from '../constants'
+import { Colors, Fonts, Media } from '../constants'
 
 import Wrap from '../layouts/wrap'
 import SiteButton from '../components/site_button'
@@ -78,7 +78,13 @@ export default () => (
             },
           ].map(item => {
             return (
-              <div className="col-4">
+              <div
+                css={css`
+                  ${Media} {
+                    padding-bottom: 3rem;
+                  }
+                `}
+                className="col-4">
                 <div
                   css={css`
                     color: ${Colors.primary};
