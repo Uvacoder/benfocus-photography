@@ -67,7 +67,9 @@ export default () => (
         <StaticQuery
           query={graphql`
             query {
-              allMarkdownRemark {
+              allMarkdownRemark(
+                filter: { frontmatter: { public: { eq: true } } }
+              ) {
                 edges {
                   node {
                     frontmatter {

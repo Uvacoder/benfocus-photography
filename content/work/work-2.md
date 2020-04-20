@@ -1,6 +1,7 @@
 ---
 sort: 1
 title: Sample Work
+public: true
 category: Wedding Photoshoot
 thumbnail: content/uploads/work-2.png
 photos:
