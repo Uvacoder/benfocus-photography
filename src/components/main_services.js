@@ -12,82 +12,81 @@ import ServiceImage4 from '../assets/images/service-4.png'
 import { SectionHead } from '../components/section_data'
 import NormalSection from '../components/normal_section'
 
-let services = [
-  {
-    image: 1,
-    featured: true,
-    title: 'Event Coverage',
-    items: [
-      'Weddings',
-      'Outdoor Festivals',
-      'Promotional Events',
-      'Concerts',
-      'Team Sports',
-    ],
-  },
-  {
-    image: 2,
-    featured: true,
-    title: 'Property Tours',
-    items: [
-      'Weddings',
-      'Outdoor Festivals',
-      'Promotional Events',
-      'Concerts',
-      'Team Sports',
-    ],
-  },
-  {
-    image: 3,
-    featured: true,
-    title: 'Multimedia',
-    items: [
-      'Weddings',
-      'Outdoor Festivals',
-      'Promotional Events',
-      'Concerts',
-      'Team Sports',
-    ],
-  },
-  {
-    image: 4,
-    featured: false,
-    title: '360 VR',
-    items: [
-      'Weddings',
-      'Outdoor Festivals',
-      'Promotional Events',
-      'Concerts',
-      'Team Sports',
-    ],
-  },
-  {
-    image: 3,
-    featured: false,
-    title: 'Multimedia',
-    items: [
-      'Weddings',
-      'Outdoor Festivals',
-      'Promotional Events',
-      'Concerts',
-      'Team Sports',
-    ],
-  },
-  {
-    image: 4,
-    featured: false,
-    title: '360 VR',
-    items: [
-      'Weddings',
-      'Outdoor Festivals',
-      'Promotional Events',
-      'Concerts',
-      'Team Sports',
-    ],
-  },
-]
-
 export default ({ featured }) => {
+  let services = [
+    {
+      image: 1,
+      featured: true,
+      title: 'Event Coverage',
+      items: [
+        'Weddings',
+        'Outdoor Festivals',
+        'Promotional Events',
+        'Concerts',
+        'Team Sports',
+      ],
+    },
+    {
+      image: 2,
+      featured: true,
+      title: 'Property Tours',
+      items: [
+        'Weddings',
+        'Outdoor Festivals',
+        'Promotional Events',
+        'Concerts',
+        'Team Sports',
+      ],
+    },
+    {
+      image: 3,
+      featured: true,
+      title: 'Multimedia',
+      items: [
+        'Weddings',
+        'Outdoor Festivals',
+        'Promotional Events',
+        'Concerts',
+        'Team Sports',
+      ],
+    },
+    {
+      image: 4,
+      featured: false,
+      title: '360 VR',
+      items: [
+        'Weddings',
+        'Outdoor Festivals',
+        'Promotional Events',
+        'Concerts',
+        'Team Sports',
+      ],
+    },
+    {
+      image: 3,
+      featured: false,
+      title: 'Multimedia',
+      items: [
+        'Weddings',
+        'Outdoor Festivals',
+        'Promotional Events',
+        'Concerts',
+        'Team Sports',
+      ],
+    },
+    {
+      image: 4,
+      featured: false,
+      title: '360 VR',
+      items: [
+        'Weddings',
+        'Outdoor Festivals',
+        'Promotional Events',
+        'Concerts',
+        'Team Sports',
+      ],
+    },
+  ]
   if (featured) {
     services = services.filter(item => item.featured)
   }
