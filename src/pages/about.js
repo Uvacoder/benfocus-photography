@@ -22,23 +22,31 @@ export default () => (
           <div className="col-6">
             <SectionHead title="Welcome to Ben Focus" />
             <SectionDescription color={Colors.primary}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              laudantium, quas laboriosam iusto deserunt expedita.
+              BenFocus is the brainchild of Benjamin Tambara, an ace
+              photographer and videographer based in Seychelles. A professional,
+              who always goes the extra mile, Ben has honed his craft over the
+              years to deliver specialised solutions to a discerning and happy
+              clientele.
             </SectionDescription>
             <SectionDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              laudantium, quas laboriosam iusto deserunt expedita, labore
-              incidunt odio similique commodi quos, placeat molestias aperiam
-              debitis corrupti natus! A, consectetur nobis.
+              In the world of communications, it’s the little details that go a
+              long way to create the big picture. At BenFocus, we focus on the
+              details to improve our performance and deliver consistent results
             </SectionDescription>
             <SectionDescription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis rem, nihil nesciunt in eligendi mollitia facilis iusto
-              unde praesentium quis quibusdam voluptates libero. Adipisci ad
-              inventore dolores quis distinctio exercitationem. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Neque maxime quia nam
-              fugit ipsum. Accusantium minima labore vero? Iusto asperiores
-              aliquam earum nostrum aperiam quos accusantium officia sint.
+              If you are looking for a TV Commercial to launch your product or
+              service or a Corporate Video to increase your company’s market
+              share, consider we’ve got you covered.
+            </SectionDescription>
+            <SectionDescription>
+              A one stop shop for all your communication needs, BenFocus has
+              invested in state-of-the-art equipment and top notch technical and
+              creative human resources to help you achieve your goals.
+            </SectionDescription>
+            <SectionDescription>
+              Our focus is also on working closely with clients to understand
+              their individual needs and deliver a high quality output, on time
+              and on target, to keep you ahead of the competition.
             </SectionDescription>
           </div>
         </div>

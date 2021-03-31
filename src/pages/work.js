@@ -18,10 +18,10 @@ export default () => (
           <div className="col-12">
             <SectionHead centered title="Reaching For The Sky" />
             <SectionDescription color={Colors.primary}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
-              necessitatibus rerum perspiciatis odit, libero debitis iusto
-              optio, neque iure placeat voluptates repudiandae dolores numquam
-              in magnam! Odit eius est neque!
+              Work that has won awards and recognition. Work that has built
+              brands. Work that has gone viral. Here, we proudly present a
+              selection of the work we do to give you a better picture of our
+              facilities and capabilities. Let the work speak for itself.
             </SectionDescription>
           </div>
           <div className="col-6 left">

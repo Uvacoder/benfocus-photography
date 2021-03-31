@@ -20,6 +20,17 @@ import NormalSection from '../components/normal_section'
 const websiteTitle = 'Ben Focus'
 
 const Header = ({ innerPageName }) => {
+  const menuItems = [
+    { to: '/', title: 'Home' },
+    { to: '/work', title: 'Work' },
+    { to: '/about', title: 'About' },
+    { to: '/services', title: 'Services' },
+    { to: '/clients', title: 'Clients' },
+    { to: '/gear', title: 'Gear' },
+    { to: '/seychelles', title: 'Seychelles' },
+    { to: '/contact', title: 'Contact' },
+  ]
+
   return (
     <header
       css={css`
@@ -76,13 +87,7 @@ const Header = ({ innerPageName }) => {
                   margin-right: 0;
                 }
               `}>
-              {[
-                { to: '/', title: 'Home' },
-                { to: '/work', title: 'Work' },
-                { to: '/about', title: 'About' },
-                { to: '/services', title: 'Services' },
-                { to: '/contact', title: 'Contact' },
-              ].map(item => (
+              {menuItems.map(item => (
                 <li
                   css={css`
                     display: inline-block;
@@ -154,7 +159,7 @@ const Header = ({ innerPageName }) => {
               margin-top: 2rem;
             }
           `}>
-          {innerPageName || 'Photography & Videography Services'}
+          {innerPageName || 'Our focus is on the details'}
         </h1>
         {innerPageName ? (
           ''
@@ -168,14 +173,13 @@ const Header = ({ innerPageName }) => {
                 margin-bottom: 3rem;
                 opacity: 0.8;
               `}>
-              Extreme Aerial Photography and Video Artistry for Lifestyle,
-              Action and Commerce.
+              One Stop Communication Solutions for Seychelles and beyond
             </h2>
             <SiteButton
-              to="/services"
+              to="/about"
               color={Colors.primary}
               textColor={Colors.white}
-              label="More Info"
+              label="Read More"
             />
           </div>
         )}

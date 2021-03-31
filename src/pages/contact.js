@@ -16,6 +16,10 @@ export default () => (
         <div className="row">
           <div className="col-12">
             <SectionHead color={Colors.white} title="Send Us A Message" />
+            <SectionDescription color={Colors.white}>
+              If you are looking for focussed communication solutions, drop us a
+              lineor just give us a ring.
+            </SectionDescription>
           </div>
         </div>
         <div
